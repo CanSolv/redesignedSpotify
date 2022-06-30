@@ -1,0 +1,116 @@
+/*BOTTOM BAR*/
+
+.bar.bbar {
+    background-color: rgb(77, 73, 73);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    column-gap: 70px;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    block-size: max-content;
+    border-top: 2px solid gray;
+}
+
+/*CURRENT DIV*/
+
+.current {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    margin-left: 20px;
+    color: white;
+}
+
+
+.current.text {
+    font-size: medium;
+    order: 1;
+}
+
+#current-artist {
+    opacity: 0.75;
+}
+
+.bbar.heart {
+    order: 2;
+}
+
+/*PROGRESS DIV*/
+
+.progress {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    margin-left: 20px;
+    align-items: center;
+}
+
+/*AUDIO DIV*/
+
+.audio {
+    display: flex;
+    flex-direction: row;
+}
+
+/*EXTRA DIV*/
+
+.extra {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    column-gap: 15px;
+}
+
+
+/*LEFT BAR*/
+
+div.bar.lbar{
+    display: flex;
+    background-color: rgb(77, 73, 73);
+    z-index: 1;
+    width: 5%;
+    float: left;
+    block-size: max-content;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top:0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 35px;
+}
+
+.bar.item{
+    margin-left: 10px;
+    color: white;
+}
+
+
+.bar.lbar.icons{
+    position: relative;
+    display: flex;
+    margin-left: 20px;
+}
+
+.bar.lbar.home{
+    order: 0;
+}
+
+.bar.lbar.explore{
+    order: 1;
+}
+
+.bar.lbar.library{
+    order: 2;
+}
+
+.bar.lbar.likedsong{
+    order: 3;
+}
