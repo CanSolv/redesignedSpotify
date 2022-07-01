@@ -5,28 +5,34 @@
     <head>
         <title>Not Spotify</title>
         <link rel="stylesheet" href="indexstyle.css">
-
-
+        <link rel="stylesheet" href="https://i.icomoon.io/public/temp/7f81b76bb8/UntitledProject/style.css">
     </head> 
 
     <body>
         
+        <!--TOP BAR-->
 
+        
+
+
+        <!--SIDE BAR-->
         
         <div class="bar lbar">
           <h3 class="bar item"><img src="./SVGs/notspotify.svg" alt="original logo"></h3>
             <div class="bar lbar icons">
-              <a href="#" class="bar lbar home"><img src="./SVGs/home.svg" alt="home"></a>
-              <a href="#" class="bar lbar explore"><image src="./SVGs/explore.svg" alt="explore"></a>
-              <a href="#" class="bar lbar library"><image src="./SVGs/library.svg" alt="library"></a>
-              <a href="#" class="bar lbar likedsong"><image src="./SVGs/likedsong.svg" alt="liked songs"></a>
+              <a href="#" class="bar lbar home"><span class="icon-home"></span></a>
+              <a href="#" class="bar lbar explore"><span class="icon-explore"></span></a>
+              <a href="#" class="bar lbar library"><span class="icon-library"></span></a>
+              <a href="#" class="bar lbar likedsong"><span class="icon-likedsong"></span></a>
             </div>
-            
         </div>
  
-    <div style="margin-left:5%">
+    <div margin-left="5%">
         
 
+    </div>
+
+        <!--BOTTOM BAR-->
 
         <div class="bar bbar">
             <div class="current">
@@ -39,26 +45,24 @@
             </div>
 
             <div class="progress">
-                <img src="./SVGs/skip-back.svg" alt="skip back button" class="svg skip-back">
-                <img src="./SVGs/pause.svg" alt="pause button" class="svg pause">
-                <img src="./SVGs/skip-forward.svg" alt="skip forward button" class="svg skip-forward">
-                <img src="./SVGs/progress-bar.svg" alt="progress bar" class="svg progress-bar">
+                <button><span class="icon-skip-back"></span></button>
+                <button><span class="icon-pause2"></span></button>
+                <button><span class="icon-skip-forward"></span></button>
+                <input class="time-bar" type="range" min="0" max="100" step="1">
             </div>
 
             <div class="audio">
-                <img src="./SVGs/audio.svg" alt="audio" class="svg audio">
+                <span class="icon-audio"></span>
+                <input class="vol" type="range" min="0" max="1" step="0.005">
             </div>
         
             <div class="extra">
-                <img src="./SVGs/repeat.svg" alt="repeat" class="svg repeat">
-                <img src="./SVGs/mix.svg" alt="mix" class="svg mix">
-                <img src="./SVGs/queue.svg" alt="queue" class="svg queue">
+                <button><span class="icon-repeat"></span></button>
+                <button><span class="icon-mix"></span></button>
+                <button><span class="icon-queue"></span></button>
             </div>
         </div>
 
-
-
-    </div>
     </body>
 </html>
 

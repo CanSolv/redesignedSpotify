@@ -1,7 +1,7 @@
 /*BOTTOM BAR*/
 
 .bar.bbar {
-    background-color: rgb(77, 73, 73);
+    background-color: #4e5b74;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -46,9 +46,84 @@
 .progress {
     display: flex;
     flex-direction: row;
-    column-gap: 15px;
+    column-gap: 10px;
     margin-left: 20px;
     align-items: center;
+    align-content: center;
+    color: white;
+    font-size: 25px;
+}
+
+.icon-skip-back:before {
+    content: "\e908";
+}
+
+.icon-pause2:before {
+    content: "\ea1d";
+    background-color: white;
+    color: #4e5b74;
+    border-radius: 30px;
+    border: 3px solid white;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.icon-skip-forward:before {
+    content: "\e909";
+}
+
+.icon-skip-back:hover {
+    color: #1A1A1A
+}
+
+.icon-pause2:hover {
+    color: #1A1A1A;
+}
+
+.icon-skip-forward:hover {
+    color: #1A1A1A;
+}
+
+.icon-skip-forward:active {
+    color: white;
+}
+
+.icon-pause2:active {
+    color: white;
+}
+
+.icon-skip-back:active {
+    color: white;
+}
+
+.time-bar {
+    -webkit-appearance: none;
+    background: linear-gradient(90deg, #826eab 60%, black 60%);
+    border-radius: 12px;
+    height: 5px;
+    width: 480px;
+}
+
+.time-bar:hover {
+    opacity: 1;
+}
+
+.time-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.time-bar::-moz-range-thumb {
+cursor: pointer;
+background: white;
+border-radius: 50%;
+width: 15px;
+height: 15px;
 }
 
 /*AUDIO DIV*/
@@ -56,7 +131,45 @@
 .audio {
     display: flex;
     flex-direction: row;
+    column-gap: 5px;
+    align-items: center;
 }
+
+
+.vol {
+    -webkit-appearance: none;
+    background: linear-gradient(90deg, #826eab 60%, black 60%);
+    border-radius: 12px;
+    height: 5px;
+}
+
+.vol:hover {
+    opacity: 1;
+}
+
+.vol::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: white;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+.vol::-moz-range-thumb {
+cursor: pointer;
+background: white;
+border-radius: 50%;
+width: 10px;
+height: 10px;
+}
+
+
+.icon-audio:before {
+    content: "\e900";
+    color: #f3f4f6;
+  }
 
 /*EXTRA DIV*/
 
@@ -66,19 +179,42 @@
     flex-wrap: nowrap;
     align-items: center;
     column-gap: 15px;
+    font-size: 20px;
 }
 
+.icon-repeat:before {
+    content: "\e902";
+}
+
+.icon-mix:before {
+    content: "\e907";
+}
+
+.icon-queue:before {
+    content: "\e901";
+}
+
+.icon-repeat:hover {
+    color: #1A1A1A;
+}
+
+.icon-mix:hover {
+    color: #1A1A1A;
+}
+
+.icon-queue:hover {
+    color: #1A1A1A;
+}
 
 /*LEFT BAR*/
 
 div.bar.lbar{
     display: flex;
-    background-color: rgb(77, 73, 73);
+    background-color: #4e5b74;
     z-index: 1;
     width: 5%;
     float: left;
-    block-size: max-content;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     left: 0;
     top:0;
@@ -97,20 +233,86 @@ div.bar.lbar{
     position: relative;
     display: flex;
     margin-left: 20px;
+    color: #1A1A1A;
+    font-size: 30px;
+    text-decoration: none;
 }
 
-.bar.lbar.home{
+.icon-home:hover {
+    color: white;
+}
+
+.icon-explore:hover {
+    color: white;
+}
+
+.icon-library:hover {
+    color: white;
+}
+
+.icon-likedsong:hover {
+    color: white;
+}
+
+.icon-home:active {
+    color: #1A1A1A;
+}
+
+.icon-explore:active {
+    color: #1A1A1A;
+}
+
+.icon-library:active {
+    color: #1A1A1A;
+}
+
+.icon-likedsong:active {
+    color: #1A1A1A;
+}
+
+.icon-home:before {
+    content: "\e904";
     order: 0;
-}
+    display: inline-block;
+  }
 
-.bar.lbar.explore{
+.icon-explore:before {
+    content: "\6b";
     order: 1;
+    display: inline-block;
 }
 
-.bar.lbar.library{
+.icon-library:before {
+    content: "\e905";
     order: 2;
+    display: inline-block;
 }
 
-.bar.lbar.likedsong{
+.icon-likedsong:before {
+    content: "\e906";
     order: 3;
+    display: inline-block;
+}
+
+
+/*ICON SETTINGS*/
+
+a {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
