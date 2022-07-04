@@ -15,7 +15,7 @@
         <div class="bar tbar" style="margin-left:4.4%;">
             <div class="sbar">
                 <button class="search"><span><!--SUBMIT BUTTON--></span></button> 
-                <input id="searchInput" type="text" placeholder="Search...">
+                <input id="searchInput" type="text" maxlength="200" placeholder="Search...">
                 <!--FILTERS-->
             </div>
 
@@ -23,25 +23,14 @@
     
             </div>
             <div class="profile-buttons">
-                    <div class="profile">
-
-                    </div>                  
+                <div class="profile">
+                    <a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRKH-duOReqDWeZ_plPcMTnFoKwpa-Y8xnQg&usqp=CAU" alt="profile picture" class="pfp"></a>
+                </div>                  
                        
                 <div class="hoverable">
-
-                    <div class="bookmark">
-                
-                    </div>
-
-                    <div class="settings">
-                        
-
-                    </div>
-
-                    <div class="notifications"> 
-
-                    </div>
-                    
+                        <a href="#" class="notifications"><span class="icon icon-noti"></span></a>
+                        <a href="#" class="settings"><span class="icon icon-set"></span></a>
+                        <a href="#" class="bookmarks"><span class="icon icon-bookmark"></span></a>
                 </div>
                 
             </div>
@@ -49,17 +38,35 @@
         <!--SIDE BAR-->
         
         <div class="bar lbar">
-          <h3 class="bar item"><img src="./EXTRAS/SVGs/notspotify.svg" alt="original logo"></h3>
-            <div class="bar lbar icons">
-              <a href="#" class="bar lbar home"><span class="icon icon-home"></span></a>
-              <a href="#" class="bar lbar explore"><span class="icon icon-explore"></span></a>
-              <a href="#" class="bar lbar library"><span class="icon icon-library"></span></a>
-              <a href="#" class="bar lbar likedsong"><span class="icon icon-likedsong"></span></a>
+            <div class="logo">
+                <h3><img src="./EXTRAS/SVGs/notspotify.svg" alt="original logo"></h3>
+            </div>
+            <div class="nav">
+                <a href="#" class="bar lbar home"><span class="icon icon-home"></span></a>
+                <a href="#" class="bar lbar explore"><span class="icon icon-explore"></span></a>
+                <a href="#" class="bar lbar library"><span class="icon icon-library"></span></a>
+                <a href="#" class="bar lbar likedsong"><span class="icon icon-likedsong"></span></a>
             </div>
         </div>
  
-    <div style="margin-left:4.4%">
+
+
+    <!--PAGE CONTENT-->
+    
+    <div style="margin-left:4.4%" class="content">
+
+      
+
+
         
+
+
+
+
+
+
+
+
 
     </div>
 
@@ -76,9 +83,15 @@
             </div>
 
             <div class="progress">
-                <button><span class="icon icon-skip-back"></span></button>
-                <button><span class="icon icon-pause2"></span></button>
-                <button><span class="icon icon-skip-forward"></span></button>
+                <button class="back-btn">
+                    <span class="icon icon-skip-back"></span>
+                </button>
+                <button class="pause-btn">
+                    <span class="icon icon-pause2"></span>
+                </button>
+                <button class="forward-btn">
+                    <span class="icon icon-skip-forward"></span>
+                </button>
                 <input class="time-bar" type="range" min="0" max="100" step="1">
             </div>
 
@@ -88,11 +101,9 @@
             </div>
         
             <div class="extra">
-                <button><span class="icon icon-repeat"></span></button>
-                <button><span class="icon icon-mix"></span></button>
-                <button><span class="icon icon-queue"></span></button>
+                <button class="repeat"><span class="icon icon-repeat"></span></button>
+                <button class="mix"><span class="icon icon-mix"></span></button>
+                <button class="queue"><span class="icon icon-queue"></span></button>
             </div>
         </div>
-
-    </body>
 </html>
