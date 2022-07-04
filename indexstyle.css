@@ -1,3 +1,47 @@
+/*TOP BAR*/
+.bar.tbar {
+    background-color: #4e5b74;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    column-gap: 70px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    block-size: max-content;
+    height: 9%;
+}
+
+.sbar {
+    margin-left: 35px;
+    background-color: #4e5b74;
+    color: white;
+    border: 1px solid #1A1A1A;
+    border-radius: 50px;
+    padding: 5px;
+    width: 60%;
+    height: 3.5%;
+    position: fixed;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    column-gap: 5px;
+}
+
+.search {
+    order: 0;
+}
+
+#searchInput {
+    order: 1;
+    block-size: inherit;
+    height: 100%;
+    width: 100%;
+}
+
+
 /*BOTTOM BAR*/
 
 .bar.bbar {
@@ -5,7 +49,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
     column-gap: 70px;
     align-items: center;
     position: fixed;
@@ -15,6 +58,7 @@
     width: 100%;
     block-size: max-content;
     border-top: 2px solid gray;
+    justify-content: space-around;
 }
 
 /*CURRENT DIV*/
@@ -23,10 +67,8 @@
     display: flex;
     flex-direction: row;
     column-gap: 20px;
-    margin-left: 20px;
     color: white;
 }
-
 
 .current.text {
     font-size: medium;
@@ -283,6 +325,16 @@ a {
 
 button {
 	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+input {
+    background: none;
 	color: inherit;
 	border: none;
 	padding: 0;
