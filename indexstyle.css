@@ -1,3 +1,71 @@
+/*ICONS*/
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?b8bpi7');
+    src:  url('fonts/icomoon.eot?b8bpi7#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?b8bpi7') format('truetype'),
+      url('fonts/icomoon.woff?b8bpi7') format('woff'),
+      url('fonts/icomoon.svg?b8bpi7#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+  
+.icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+.icon-skip-back:before {
+    content: "\e908";
+}
+.icon-skip-forward:before {
+    content: "\e909";
+}
+.icon-audio:before {
+    content: "\e900";
+}
+.icon-explore:before {
+    content: "\6b";
+}
+.icon-queue:before {
+    content: "\e901";
+}
+.icon-repeat:before {
+    content: "\e902";
+}
+.icon-heart:before {
+    content: "\e903";
+}
+.icon-home:before {
+    content: "\e904";
+}
+.icon-library:before {
+    content: "\e905";
+}
+.icon-likedsong:before {
+    content: "\e906";
+}
+.icon-mix:before {
+    content: "\e907";
+}
+.icon-pause2:before {
+    content: "\ea1d";
+}
+.likesong:before {
+    content: "\e903";
+}
+
 /*BOTTOM BAR*/
 
 .bar.bbar {
@@ -37,8 +105,12 @@
     opacity: 0.75;
 }
 
-.bbar.heart {
+.likesong:before {
     order: 2;
+}
+
+.likesong:active {
+    color: red;
 }
 
 /*PROGRESS DIV*/
@@ -54,22 +126,13 @@
     font-size: 25px;
 }
 
-.icon-skip-back:before {
-    content: "\e908";
-}
-
 .icon-pause2:before {
-    content: "\ea1d";
     background-color: white;
     color: #4e5b74;
     border-radius: 30px;
     border: 3px solid white;
     font-size: 20px;
     padding: 5px;
-}
-
-.icon-skip-forward:before {
-    content: "\e909";
 }
 
 .icon-skip-back:hover {
@@ -167,7 +230,6 @@ height: 10px;
 
 
 .icon-audio:before {
-    content: "\e900";
     color: #f3f4f6;
   }
 
@@ -180,18 +242,6 @@ height: 10px;
     align-items: center;
     column-gap: 15px;
     font-size: 20px;
-}
-
-.icon-repeat:before {
-    content: "\e902";
-}
-
-.icon-mix:before {
-    content: "\e907";
-}
-
-.icon-queue:before {
-    content: "\e901";
 }
 
 .icon-repeat:hover {
@@ -271,25 +321,21 @@ div.bar.lbar{
 }
 
 .icon-home:before {
-    content: "\e904";
     order: 0;
     display: inline-block;
   }
 
 .icon-explore:before {
-    content: "\6b";
     order: 1;
     display: inline-block;
 }
 
 .icon-library:before {
-    content: "\e905";
     order: 2;
     display: inline-block;
 }
 
 .icon-likedsong:before {
-    content: "\e906";
     order: 3;
     display: inline-block;
 }
