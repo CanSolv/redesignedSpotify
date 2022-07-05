@@ -11,6 +11,7 @@
     width: 100%;
     block-size: max-content;
     height: 9%;
+    column-gap: 50px;
 }
 
 .sbar {
@@ -40,22 +41,8 @@
     width: 100%;
 }
 
-.profile-buttons {
-    position: fixed;
-    right: 25px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-end;
-    column-gap: 20px;
-    border: #1A1A1A solid 1px;
-    border-radius: 40px;
-    padding: 5px;
-}
-
 .pfp {
+    order: 0;
     vertical-align: middle;
     max-width: 40px;
     max-height: 40px;
@@ -65,19 +52,83 @@
     box-sizing: border-box;
 }
 
-.notifications {
-    visibility: hidden;
-}
+.profile-buttons {
+    order: 2;
+    display: flex;
+    position: fixed;
+    right: 25px;
+    font-size: 20px;
+    flex-direction: row-reverse;
+    column-gap: 20px;
+    width: 2.5vw;
+    overflow: hidden;
+    transition-property: width;
+    transition-duration: 1.5s;
+    transition: 0.7s;
 
-.profile-buttons:hover .notifications {
-    visibility: visible !important;
 }
 
 .profile-buttons:hover {
-    border-color: rgba(10.2, 10.2, 10.2, 1);
+    width: 20vw;
+}
+
+.hoverable {
+    position: relative;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    column-gap: 20px;
+}
+
+.notifications:hover, .settings:hover, .bookmarks:hover {
+    color: white;
+}
+
+.notifications:active, .settings:active, .bookmarks:active {
+    color: #1A1A1A;
 }
 
 /*CONTENT PAGE*/
+
+.content {
+    background-color: #4e5b74;
+    z-index: -2;
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    padding: 0;
+    border: 0;
+    margin-left: 5%;
+    margin-top: 60px;
+
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.content > h2 {
+    margin-inline-start: 30px;
+}
+
+.fyp {
+    position: relative;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 30px;
+    justify-content: space-around;
+    column-gap: 70px;
+}
+
+.fyp > img {
+    width: 330px;
+    height: 330px;
+}
 
 
 
@@ -155,24 +206,16 @@
     background-color: #1A1A1A;
 }
 
-.back-btn:hover {
-    color: #1A1A1A
-}
-
-.forward-btn:hover {
+.back-btn:hover, .forward-btn:hover {
     color: #1A1A1A;
 }
 
-.forward-btn:active {
+.forward-btn:active, .back-btn:active {
     color: white;
 }
 
 .pause-btn:active {
     background-color: white;
-}
-
-.back-btn:active {
-    color: white;
 }
 
 .time-bar {
@@ -203,6 +246,10 @@ background: white;
 border-radius: 50%;
 width: 15px;
 height: 15px;
+}
+
+.time-bar::-webkit-slider-thumb:hover {
+    background-color: #89C4FF;
 }
 
 /*AUDIO DIV*/
@@ -244,10 +291,23 @@ width: 10px;
 height: 10px;
 }
 
+.vol::-webkit-slider-thumb:hover {
+    background-color: #89C4FF;
+}
 
-.icon-audio:before {
-    color: #f3f4f6;
-  }
+.volume-mute:hover {
+    color: #1A1A1A;
+}
+
+.volume-mute:active{
+    color: white;
+}
+.volume-mute {
+    color: white;
+}
+
+
+
 
 /*EXTRA DIV*/
 
@@ -260,16 +320,12 @@ height: 10px;
     font-size: 20px;
 }
 
-.repeat:hover {
+.repeat:hover, .mix:hover, .queue:hover {
     color: white;
 }
 
-.mix:hover {
-    color: white;
-}
-
-.queue:hover {
-    color: white;
+.queue:active, .repeat:active, .mix:active{
+    color: #1A1A1A;
 }
 
 /*LEFT BAR*/
@@ -305,35 +361,11 @@ div.lbar{
     row-gap: 35px;
 }
 
-.home:hover {
+.home:hover, .library:hover, .likedsong:hover, .explore:hover{
     color: white;
 }
 
-.explore:hover {
-    color: white;
-}
-
-.library:hover {
-    color: white;
-}
-
-.likedsong:hover {
-    color: white;
-}
-
-.home:active {
-    color: #1A1A1A;
-}
-
-.explore:active {
-    color: #1A1A1A;
-}
-
-.library:active {
-    color: #1A1A1A;
-}
-
-.likedsong:active {
+.home:active, .library:active, .likedsong:active, .explore:active{
     color: #1A1A1A;
 }
 
