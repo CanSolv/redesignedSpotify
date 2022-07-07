@@ -19,7 +19,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1A1A1A;
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: auto;
     position: absolute;
     top: 0;
@@ -28,47 +28,49 @@ body {
     right: 0;
 }
 
-    /* Hide scrollbar for Chrome, Safari and Opera */
-::-webkit-scrollbar {
-    display: none;
-}
-
-    /* Hide scrollbar for IE, Edge and Firefox */
-.content {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #1A1A1A;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 /*TOP BAR*/
 .bar.tbar {
     position: fixed;
-    z-index: 5;
+    z-index: 4;
     background-color: #4e5b74;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     block-size: max-content;
-    height: 9%;
-    column-gap: 50px;
+    height: 5vh;
+    column-gap: 0px;
+    border-bottom: 1px solid black;
 }
 
 .sbar {
     position: fixed;
-    margin-left: 35px;
+    top: 5px;
+    left: 30px;
     background-color: #4e5b74;
     color: white;
     border: 1px solid #1A1A1A;
     border-radius: 50px;
     padding: 5px;
-    width: 60%;
-    height: 3.5%;
+    width: 130px;
+    height: 10px;
     display: flex;
     justify-content: start;
     align-items: flex-start;
-    column-gap: 10px;
+    column-gap: 5px;
 }
 
 .search {
@@ -77,16 +79,15 @@ body {
 
 #searchInput {
     order: 1;
+    font-size: 12px;
     block-size: inherit;
-    height: 100%;
-    width: 100%;
 }
 
 .pfp {
     order: 0;
     vertical-align: middle;
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 30px;
+    max-height: 30px;
     border-radius: 50%;
     border: solid 2px;
     border-color: rgba(10.2, 10.2, 10.2, 0);
@@ -96,12 +97,12 @@ body {
 .profile-buttons {
     order: 2;
     display: flex;
-    position: fixed;
-    right: 25px;
-    font-size: 30px;
+    position: relative;
+    float: right;
+    font-size: 15px;
     flex-direction: row-reverse;
-    column-gap: 25px;
-    width: 50px;
+    column-gap: 20px;
+    width: 30px;
     overflow: hidden;
     transition-property: width;
     transition-duration: 1.5s;
@@ -133,8 +134,8 @@ body {
 /*CONTENT PAGE*/
 
 .content {
-    margin-left: 5%;
-    padding-top: 5%;
+    padding-left: 10%;
+    padding-top: 10%;
     padding-bottom: 2.5%;
     background-color: #4e5b74;
     z-index: 1;
@@ -145,10 +146,10 @@ body {
     align-items: flex-start;
     flex-wrap: nowrap;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #fyp-heading {
-    margin-inline-start: 30px;
     margin-top: 0;
     order: 0;
 }
@@ -161,23 +162,16 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    padding-left: 30px;
-    justify-content: space-around;
-    column-gap: 60px;
+    justify-content: start;
+    column-gap: 20px;
+    min-height: 80px;
+    overflow-x: auto;
 }
 
 .fyp > img {
-    width: 260px;
-    height: 260px;
-    border-radius: 35px;
-}
-
-.headings {
-    order: 2;
-    margin-left: 30px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
 }
 
 #bottom-row {
@@ -190,12 +184,11 @@ body {
 }
 
 .favs {
-    margin-left: 30px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     row-gap: 20px;
-    height: 290px;
+    height: 180px;
 }
 
 .first-row {
@@ -217,9 +210,9 @@ body {
 }
 
 .first-row > img, .second-row > img {
-    width: 120px;
-    height: 120px;
-    border-radius: 35px;
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
 }
 
 
@@ -281,11 +274,11 @@ body {
 }
 
 .listen-new > .icon-filledheart {
-    font-size: 24px;
+    font-size: 12px;
 }
 
 .listen-new > .icon-play {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 #friends-heading {
@@ -329,17 +322,17 @@ body {
 div.lbar{
     display: flex;
     background-color: #4e5b74;
-    z-index: 2;
-    width: 5%;
+    z-index: 10;
+    width: 6%;
     float: left;
     height: 100%;
     position: fixed;
     left: 0px;
-    top: 0;
     flex-direction: column;
     flex-wrap: nowrap;
     row-gap: 50px;
     align-items: center;
+    border-right: #1A1A1A solid 2px;
 }
 
 .logo {
@@ -350,11 +343,12 @@ div.lbar{
     order: 1;
     display: flex;
     color: #1A1A1A;
-    font-size: 35px;
+    font-size: 15px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     row-gap: 60px;
+    margin-top: 50px;
 }
 
 .home:hover, .library:hover, .likedsong:hover, .explore:hover{
@@ -386,6 +380,8 @@ div.lbar{
 }
 
 
+
+
 /*BOTTOM BAR*/
 
 .bar.bbar {
@@ -398,7 +394,7 @@ div.lbar{
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 3;
+    z-index: 11;
     width: calc(100% - 40px);
     border-top: 2px solid gray;
     padding-left: 10px;
@@ -451,7 +447,7 @@ div.lbar{
     align-items: center;
     align-content: center;
     color: white;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .pause-btn {
@@ -459,7 +455,7 @@ div.lbar{
     background-color: white;
     color: #4e5b74;
     border-radius: 30px;
-    font-size: 20px;
+    font-size: 10px;
     padding: 5px;
     width: 40px;
     height: 40px;
@@ -582,7 +578,7 @@ height: 10px;
     flex-wrap: nowrap;
     align-items: center;
     column-gap: 15px;
-    font-size: 20px;
+    font-size: 10px;
 }
 
 .repeat:hover, .mix:hover, .queue:hover {
