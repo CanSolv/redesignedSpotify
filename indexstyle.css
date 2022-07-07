@@ -10,16 +10,45 @@
     font-family: 'Josefin Sans';
 }
 
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1A1A1A;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+.content {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 /*TOP BAR*/
 .bar.tbar {
+    position: fixed;
+    z-index: 5;
     background-color: #4e5b74;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
     width: 100%;
     block-size: max-content;
     height: 9%;
@@ -27,6 +56,7 @@
 }
 
 .sbar {
+    position: fixed;
     margin-left: 35px;
     background-color: #4e5b74;
     color: white;
@@ -35,7 +65,6 @@
     padding: 5px;
     width: 60%;
     height: 3.5%;
-    position: fixed;
     display: flex;
     justify-content: start;
     align-items: flex-start;
@@ -56,8 +85,8 @@
 .pfp {
     order: 0;
     vertical-align: middle;
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 50px;
+    max-height: 50px;
     border-radius: 50%;
     border: solid 2px;
     border-color: rgba(10.2, 10.2, 10.2, 0);
@@ -69,10 +98,10 @@
     display: flex;
     position: fixed;
     right: 25px;
-    font-size: 20px;
+    font-size: 30px;
     flex-direction: row-reverse;
-    column-gap: 20px;
-    width: 2.5vw;
+    column-gap: 25px;
+    width: 50px;
     overflow: hidden;
     transition-property: width;
     transition-duration: 1.5s;
@@ -81,7 +110,7 @@
 }
 
 .profile-buttons:hover {
-    width: 20vw;
+    width: 210px;
 }
 
 .hoverable {
@@ -104,26 +133,22 @@
 /*CONTENT PAGE*/
 
 .content {
+    margin-left: 5%;
+    padding-top: 5%;
     background-color: #4e5b74;
-    z-index: -2;
+    z-index: 1;
     width: 100vw;
-    height: 100vw;
-    position: fixed;
-    left: 5%;
-    top: 60px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 0;
-    border: 0;
-
-    overflow-x: auto;
+    flex-wrap: nowrap;
     overflow-y: auto;
 }
 
 #fyp-heading {
     margin-inline-start: 30px;
+    margin-top: 0;
     order: 0;
 }
 
@@ -146,9 +171,12 @@
     border-radius: 35px;
 }
 
-#favs-heading {
-    margin-inline-start: 30px;
+.headings {
     order: 2;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 #bottom-row {
@@ -156,9 +184,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    column-gap: 70px;
+    justify-content: space-between;
+    column-gap: 3.5vw;
 }
 
 .favs {
@@ -167,6 +194,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     row-gap: 20px;
+    height: 290px;
 }
 
 .first-row {
@@ -194,16 +222,18 @@
 }
 
 
-.new-tracks {
+.tracks {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: baseline;
-    justify-content: start;
+    justify-content: space-around;
     background-color: #1A1A1A;
-    row-gap: 30px;
+    padding: 15px;
+    row-gap: 20px;
     height: 260px;
     width: 450px;
+    overflow-y: auto;
 }
 
 .track {
@@ -212,7 +242,6 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    margin: 20px 15px 20px 15px;
     border: gray groove 1px;
 }
 
@@ -232,11 +261,127 @@
 }
 
 .listeners {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5vw;
     margin-left: 120px;
     order: 2;
     font-size: 12px;
     color: white;
+}
+
+.listen-new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 3;
+    margin-left: 70px;
+}
+
+.listen-new > .icon-filledheart {
+    font-size: 26px;
+}
+
+.listen-new > .icon-play {
+    font-size: 50px;
+}
+
+#friends-heading {
+    order: 0;
+}
+
+.friend-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: start;
+    row-gap: 1vh;
+    background-color: #1A1A1A;
+    padding: 5px;
+}
+
+.friend > img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.friends-text {
+    color: white;
+    font-size: 13px;
+}
+
+.friend {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1vw;
+}
+
+
+
+/*LEFT BAR*/
+
+div.lbar{
+    display: flex;
+    background-color: #4e5b74;
+    z-index: 2;
+    width: 5%;
+    float: left;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 50px;
+    align-items: center;
+}
+
+.logo {
+    order: 0;
+}
+
+.nav {
+    order: 1;
+    display: flex;
+    color: #1A1A1A;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 35px;
+}
+
+.home:hover, .library:hover, .likedsong:hover, .explore:hover{
+    color: white;
+}
+
+.home:active, .library:active, .likedsong:active, .explore:active{
+    color: #1A1A1A;
+}
+
+.home {
+    order: 1;
+    display: inline-block;
+  }
+
+.explore {
+    order: 2;
+    display: inline-block;
+}
+
+.library {
+    order: 3;
+    display: inline-block;
+}
+
+.likedsong {
+    order: 4;
+    display: inline-block;
 }
 
 
@@ -252,7 +397,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     width: calc(100% - 40px);
     block-size: fit-content;
     border-top: 2px solid gray;
@@ -435,68 +580,6 @@ height: 10px;
 .queue:active, .repeat:active, .mix:active{
     color: #1A1A1A;
 }
-
-/*LEFT BAR*/
-
-div.lbar{
-    display: flex;
-    background-color: #4e5b74;
-    z-index: 1;
-    width: 5%;
-    float: left;
-    height: 100%;
-    position: fixed;
-    left: 0px;
-    top: 0;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    row-gap: 50px;
-    align-items: center;
-}
-
-.logo {
-    order: 0;
-}
-
-.nav {
-    order: 1;
-    display: flex;
-    color: #1A1A1A;
-    font-size: 30px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    row-gap: 35px;
-}
-
-.home:hover, .library:hover, .likedsong:hover, .explore:hover{
-    color: white;
-}
-
-.home:active, .library:active, .likedsong:active, .explore:active{
-    color: #1A1A1A;
-}
-
-.home {
-    order: 1;
-    display: inline-block;
-  }
-
-.explore {
-    order: 2;
-    display: inline-block;
-}
-
-.library {
-    order: 3;
-    display: inline-block;
-}
-
-.likedsong {
-    order: 4;
-    display: inline-block;
-}
-
 
 /*ICON SETTINGS*/
 
