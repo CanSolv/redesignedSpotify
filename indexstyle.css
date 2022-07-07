@@ -1,9 +1,9 @@
 @font-face {
     font-family: "Josefin Sans";
-    src: url('./Fonts/Space_Mono/SpaceMono-Bold.ttf') format('truetype'),
-         url('./Fonts/Space_Mono/SpaceMono-BoldItalic.ttf') format('truetype'),
-         url('./Fonts/Space_Mono/SpaceMono-Italic.ttf') format('truetype'),
-         url('./Fonts/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
+    src: url('./Fonts/SpaceMono-Bold.ttf') format('truetype'),
+         url('./Fonts/SpaceMono-BoldItalic.ttf') format('truetype'),
+         url('./Fonts/SpaceMono-Italic.ttf') format('truetype'),
+         url('./Fonts/SpaceMono-Regular.ttf') format('truetype');
 }
 
 * {
@@ -135,6 +135,7 @@ body {
 .content {
     margin-left: 5%;
     padding-top: 5%;
+    padding-bottom: 2.5%;
     background-color: #4e5b74;
     z-index: 1;
     width: 100vw;
@@ -349,11 +350,11 @@ div.lbar{
     order: 1;
     display: flex;
     color: #1A1A1A;
-    font-size: 30px;
+    font-size: 35px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    row-gap: 35px;
+    row-gap: 60px;
 }
 
 .home:hover, .library:hover, .likedsong:hover, .explore:hover{
@@ -392,18 +393,22 @@ div.lbar{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    column-gap: 70px;
+    column-gap: 7vw;
     align-items: center;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 3;
     width: calc(100% - 40px);
-    block-size: fit-content;
     border-top: 2px solid gray;
     padding-left: 10px;
     padding-right: 30px;
     justify-content: space-between;
+
+    min-width: calc(100% - 39px);
+    max-width: calc(100% - 41px);
+    max-height: 85px;
+    min-height: 80px;
 }
 
 /*CURRENT DIV*/
@@ -414,6 +419,13 @@ div.lbar{
     column-gap: 20px;
     color: white;
     block-size: inherit;
+
+    max-height: 85px;
+}
+
+.current > img {
+    min-width: 60px;
+    min-height: 60px;
 }
 
 .current > .text {
