@@ -138,7 +138,8 @@ body {
 
 .content {
     box-sizing: border-box;
-    padding-left: 11%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     padding-top: 11.5%;
     padding-bottom: 30%;
     background-color: #292929;
@@ -171,7 +172,7 @@ body {
     justify-content: start;
     column-gap: 20px;
     min-height: 80px;
-    width: 85vw;
+    width: 95vw;
 
     overflow: auto !important;
 }
@@ -189,7 +190,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
-    row-gap: 4vw;
+    row-gap: 5vw;
 }
 
 #favs-heading {
@@ -206,6 +207,7 @@ body {
     justify-content: center;
     row-gap: 15px;
     height: 160px;
+    width: 95vw;
 }
 
 .first-row {
@@ -232,26 +234,33 @@ body {
     border-radius: 18px;
 }
 
+.newtracks {
+    width: 95vw;
+}
+
 #new-tracks-heading {
     font-size: 20px;
     color: white;
 }
 
 .tracks {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-around;
     background-color: #1A1A1A;
-    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     row-gap: 10px;
     height: 260px;
-    width: 315px;
     overflow-y: auto;
 }
 
 .track {
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -261,6 +270,7 @@ body {
 }
 
 .track > img {
+    margin-left: 5px;
     order: 0;
     height: 45px;
     width: 45px;
@@ -302,6 +312,10 @@ body {
     font-size: 45px;
 }
 
+.friends {
+    width: 95vw;
+}
+
 #friends-heading {
     order: 0;
     font-size: 20px;
@@ -309,7 +323,7 @@ body {
 }
 
 .friend-list {
-    width: 315px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -341,38 +355,26 @@ body {
 
 
 
-/*LEFT BAR*/
+/*NAV BAR*/
 
-div.lbar{
-    display: flex;
+div.nbar{
     background-color: #6C7D8A;
     z-index: 10;
-    width: 8%;
-    float: left;
-    height: 100%;
+    width: 100vw;
     position: fixed;
-    left: 0px;
-    top: 0px;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    row-gap: 50px;
-    align-items: center;
+    bottom: 0px;
     border-right: #1A1A1A solid 2px;
 }
 
-.logo {
-    order: 0;
-}
-
 .nav {
-    order: 1;
+    
     display: flex;
     color: #1A1A1A;
     font-size: 15px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
-    row-gap: 60px;
+    column-gap: 10px;
     margin-top: 50px;
 }
 
@@ -409,7 +411,7 @@ div.lbar{
 
 /*BOTTOM BAR*/
 
-.bar.bbar {
+.bar.pbar {
 
 
     visibility: hidden;
