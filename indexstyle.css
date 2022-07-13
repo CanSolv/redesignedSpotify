@@ -141,7 +141,7 @@ body {
     padding-left: 2.5%;
     padding-right: 2.5%;
     padding-top: 11.5%;
-    padding-bottom: 30%;
+    padding-bottom: 18%;
     background-color: #292929;
     z-index: 1;
     width: 100vw;
@@ -363,19 +363,17 @@ div.nbar{
     width: 100vw;
     position: fixed;
     bottom: 0px;
-    border-right: #1A1A1A solid 2px;
-}
+    border-top: #1A1A1A solid 2px;
 
-.nav {
-    
     display: flex;
     color: #1A1A1A;
-    font-size: 15px;
+    font-size: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    column-gap: 10px;
-    margin-top: 50px;
+    justify-content: center;
+    column-gap: 20vw;
+    padding-top: 0.5vh;
 }
 
 .home:hover, .library:hover, .likedsong:hover, .explore:hover{
@@ -407,57 +405,99 @@ div.nbar{
 }
 
 
-
-
-/*BOTTOM BAR*/
+/*PLAYER BAR*/
 
 .bar.pbar {
 
 
-    visibility: hidden;
+    /* visibility: hidden; */
+
+    background-color: #6C7D8A;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 1vw;
+    align-items: center;
+    position: relative;
+    bottom: 20vh;
+    z-index: 11;
+    border-top: 1px outset gray;
+    border-bottom: 1px outset gray;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
 
 
+/* TIME BAR */
+
+.time-bar {
+    -webkit-appearance: none;
+    background: linear-gradient(90deg, #826eab 60%, black 60%);
+    border-radius: 12px;
+    height: 3.5px;
+    width: 98vw;
+}
+
+.time-bar:hover {
+    opacity: 1;
+}
+
+.time-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: white;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+}
+
+.time-bar::-moz-range-thumb {
+cursor: pointer;
+background: white;
+border-radius: 50%;
+width: 5px;
+height: 5px;
+}
+
+.time-bar::-webkit-slider-thumb:hover {
+    background-color: #89C4FF;
+}
+
+
+/* PLAYER */
+
+.player {
     background-color: #6C7D8A;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    column-gap: 7vw;
+    column-gap: 20vw;
     align-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 11;
-    width: calc(100% - 40px);
-    border-top: 2px solid gray;
-    padding-left: 10px;
-    padding-right: 30px;
     justify-content: space-between;
-
-    min-width: calc(100% - 39px);
-    max-width: calc(100% - 41px);
-    max-height: 85px;
-    min-height: 80px;
 }
 
 /*CURRENT DIV*/
 
 .current {
+    order: 0;
     display: flex;
     flex-direction: row;
-    column-gap: 20px;
+    column-gap: 5px;
     color: black;
     block-size: inherit;
-
-    max-height: 85px;
 }
 
 .current > img {
-    min-width: 60px;
-    min-height: 60px;
+    order: 0;
+    width: 40px;
+    height: 40px;
 }
 
 .current > .text {
-    font-size: normal;
+    font-size: 9px;
     order: 1;
 }
 
@@ -469,28 +509,27 @@ div.nbar{
     order: 2;
 }
 
-/*PROGRESS DIV*/
+/*CONTROLS DIV*/
 
-.progress {
+.controls {
+    order: 1;
     display: flex;
     flex-direction: row;
-    column-gap: 10px;
-    margin-left: 20px;
     align-items: center;
-    align-content: center;
+    justify-content: center;
     color: white;
-    font-size: 15px;
+    font-size: 30px;
 }
 
 .pause-btn {
     display: flex;
     background-color: white;
     color: #4e5b74;
-    border-radius: 30px;
-    font-size: 10px;
+    border-radius: 50px;
+    font-size: 20px;
     padding: 5px;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     align-items: center;
     justify-content: center;
 }
@@ -511,43 +550,10 @@ div.nbar{
     background-color: white;
 }
 
-.time-bar {
-    -webkit-appearance: none;
-    background: linear-gradient(90deg, #826eab 60%, black 60%);
-    border-radius: 12px;
-    height: 5px;
-    width: 480px;
-}
-
-.time-bar:hover {
-    opacity: 1;
-}
-
-.time-bar::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    cursor: pointer;
-    background: white;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-}
-
-.time-bar::-moz-range-thumb {
-cursor: pointer;
-background: white;
-border-radius: 50%;
-width: 15px;
-height: 15px;
-}
-
-.time-bar::-webkit-slider-thumb:hover {
-    background-color: #89C4FF;
-}
-
 /*AUDIO DIV*/
 
-.audio {
+/* .audio {
+    order: 2;
     display: flex;
     flex-direction: row;
     column-gap: 5px;
@@ -597,20 +603,19 @@ height: 10px;
 }
 .volume-mute {
     color: white;
-}
-
-
+} */
 
 
 /*EXTRA DIV*/
 
-.extra {
+/* .extra {
+    order: 3;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    column-gap: 15px;
-    font-size: 10px;
+    column-gap: 8px;
+    font-size: 15px;
 }
 
 .repeat:hover, .mix:hover, .queue:hover {
@@ -619,7 +624,7 @@ height: 10px;
 
 .queue:active, .repeat:active, .mix:active{
     color: #1A1A1A;
-}
+} */
 
 /*ICON SETTINGS*/
 
