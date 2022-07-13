@@ -6,42 +6,36 @@
         <title>Not Spotify</title>
         <link rel="stylesheet" href="indexstyle.css">
         <link rel="stylesheet" href="icons.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head> 
 
     <body>
         
         <!--TOP BAR-->
-        
-        <div class="bar tbar">
-            <div class="sbar">
-                <button class="search"><span><!--SUBMIT BUTTON--></span></button> 
-                <input id="searchInput" type="text" maxlength="200" placeholder="Search...">
-                <!--FILTERS-->
-            </div>
+        <top>
+            <div id="topbar-placeholder">
 
-            <div class="speech">
-    
             </div>
-
-            <div class="profile-buttons">
-                <a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRKH-duOReqDWeZ_plPcMTnFoKwpa-Y8xnQg&usqp=CAU" alt="profile picture" class="pfp"></a>   
-                <div class="hoverable">
-                    <a href="#" class="notifications"><span class="icon icon-noti"></span></a>
-                    <a href="#" class="settings"><span class="icon icon-set"></span></a>
-                    <a href="#" class="bookmarks"><span class="icon icon-bookmark"></span></a>
-                </div>                     
-            </div>
-        </div> 
-
+            
+            <script>
+            $(function(){
+              $("#topbar-placeholder").load("topbar.html");
+            });
+            </script>
+        </top>
         <!--NAV BAR-->
-        
-        <div class="bar nbar">
-                <a href="#" class="bar lbar home"><span class="icon icon-home"></span></a>
-                <a href="#" class="bar lbar explore"><span class="icon icon-explore"></span></a>
-                <a href="#" class="bar lbar library"><span class="icon icon-library"></span></a>
-        </div>
- 
+        <nav>
+            <div id="nav-placeholder">
+
+            </div>
+            
+            <script>
+            $(function(){
+              $("#nav-placeholder").load("nav.html");
+            });
+            </script>
+        </nav>
 
         <!--PAGE CONTENT-->
     
@@ -154,47 +148,17 @@
         </div>
 
 
-        <!--PLAYER BAR-->
+        <!-- PLAYER BAR -->
+        <play>
+            <div id="playerbar-placeholder">
 
-        
-
-        <div class="bar pbar">
-            <input class="time-bar" type="range" min="0" max="100" step="1">
-            <div class="player">
-                <div class="current">
-                    <img src="./EXTRAS/SVGs/current-thumbnail.svg" alt="current music thumbnail">
-                    <div class="text">
-                        <p id="current-name">playing music name</p>
-                        <p id="current-artist">artist name</p>
-                    </div>
-                    <button> <span class="icon likesong"></span></button>
-                </div>
-                
-                <div class="controls">
-                        <button class="back-btn">
-                            <span class="icon icon-skip-back"></span>
-                        </button>
-                        <button class="pause-btn">
-                            <span class="icon icon-pause2"></span>
-                        </button>
-                        <button class="forward-btn">
-                            <span class="icon icon-skip-forward"></span>
-                    </button>
-                    
-                </div>
-
-                <!-- <div class="audio">
-                    <button class="volume-mute"><span class="icon icon-audio"></span></button>
-                    <input class="vol" type="range" min="0" max="1" step="0.005">
-                </div> -->
-            
-                <!-- <div class="extra">
-                    <button class="repeat"><span class="icon icon-repeat"></span></button>
-                    <button class="mix"><span class="icon icon-mix"></span></button>
-                    <button class="queue"><span class="icon icon-queue"></span></button>
-                </div> -->
             </div>
-        </div>
-
+            
+            <script>
+            $(function(){
+              $("#playerbar-placeholder").load("playerbar.html");
+            });
+            </script>
+        </play>
     </body>
 </html>
