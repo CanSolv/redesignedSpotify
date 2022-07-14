@@ -1,61 +1,9 @@
 <!DOCTYPE html>
 
-<head>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <link rel="stylesheet" href="indexstyle.css">
-</head>
 <nav>
     <div class="bar nbar">
         <a href="./index.html" class="bar lbar home"><span class="icon icon-home"></span></a>
         <a href="./explore.html" class="bar lbar explore"><span class="icon icon-explore"></span></a>
-        <a href="#" class="bar lbar library"><span class="icon icon-library"></span></a>
+        <a href="./roomLibrary.html" class="bar lbar library"><span class="icon icon-library"></span></a>
     </div>
 </nav>
-
-<style>
-    div.nbar{
-        background-color: #6C7D8A;
-        z-index: 10;
-        width: 100vw;
-        position: fixed;
-        bottom: 0px;
-        border-top: #1A1A1A solid 2px;
-        display: flex;
-        color: #1A1A1A;
-        font-size: 30px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        column-gap: 20vw;
-        padding-top: 0.5vh;
-    }
-
-    .home:hover, .library:hover, .likedsong:hover, .explore:hover{
-        color: white;
-    }
-
-    .home:active, .library:active, .likedsong:active, .explore:active{
-        color: #1A1A1A;
-    }
-
-    .home {
-        order: 1;
-        display: inline-block;
-    }
-
-    .explore {
-        order: 2;
-        display: inline-block;
-    }
-
-    .library {
-        order: 3;
-        display: inline-block;
-    }
-
-    .likedsong {
-        order: 4;
-        display: inline-block;
-    }
-</style>

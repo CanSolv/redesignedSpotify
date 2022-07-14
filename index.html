@@ -6,6 +6,7 @@
         <title>Not Spotify</title>
         <link rel="stylesheet" href="indexstyle.css">
         <link rel="stylesheet" href="icons.css">
+        <link href="./fixedStyle.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head> 
@@ -13,7 +14,7 @@
     <body>
         
         <!--TOP BAR-->
-        <top>
+        <header>
             <div id="topbar-placeholder">
 
             </div>
@@ -23,20 +24,8 @@
               $("#topbar-placeholder").load("topbar.html");
             });
             </script>
-        </top>
-        <!--NAV BAR-->
-        <nav>
-            <div id="nav-placeholder">
-
-            </div>
-            
-            <script>
-            $(function(){
-              $("#nav-placeholder").load("nav.html");
-            });
-            </script>
-        </nav>
-
+        </header>
+        
         <!--PAGE CONTENT-->
     
         <div class="content">
@@ -48,14 +37,20 @@
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEUAAP+KeNJXAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
             </div>
             <div id="bottom-row">
+                <h2 id="favs-heading">Your Favorite Rooms!</h2>
                 <div class="favs">
-                    <h2 id="favs-heading">Your Favorite Rooms!</h2>
                     <div class="first-row">
+                        <img src="https://www.colorhexa.com/99fadc.png">
+                        <img src="https://www.colorhexa.com/99fadc.png">
+                        <img src="https://www.colorhexa.com/99fadc.png">
                         <img src="https://www.colorhexa.com/99fadc.png">
                         <img src="https://www.colorhexa.com/99fadc.png">
                         <img src="https://www.colorhexa.com/99fadc.png">
                     </div>
                     <div class="second-row">
+                        <img src="https://www.colorhexa.com/99fadc.png">
+                        <img src="https://www.colorhexa.com/99fadc.png">
+                        <img src="https://www.colorhexa.com/99fadc.png">
                         <img src="https://www.colorhexa.com/99fadc.png">
                         <img src="https://www.colorhexa.com/99fadc.png">
                         <img src="https://www.colorhexa.com/99fadc.png">
@@ -149,7 +144,7 @@
 
 
         <!-- PLAYER BAR -->
-        <play>
+        <footer>
             <div id="playerbar-placeholder">
 
             </div>
@@ -159,6 +154,19 @@
               $("#playerbar-placeholder").load("playerbar.html");
             });
             </script>
-        </play>
+        </footer>
+        <!--NAV BAR-->
+        <nav>
+            <div id="nav-placeholder">
+
+            </div>
+            
+            <script>
+            $(function(){
+              $("#nav-placeholder").load("nav.html");
+            });
+            </script>
+        </nav>
+
     </body>
 </html>
